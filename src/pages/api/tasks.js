@@ -13,9 +13,12 @@ if (mongoose.models.Task) {
 } else {
   Task = mongoose.model("Task", taskSchemas);
 }
+
 export default async function handler(req, res) {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/test");
+    await mongoose.connect(
+      "mongodb+srv://obelisque59:zqcG6NASghoWkHJS@cluster0.guauuz0.mongodb.net/?retryWrites=true&w=majority"
+    );
   } catch (error) {
     console.log(error);
     return res.status(400).json({ message: "fail" });
