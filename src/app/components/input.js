@@ -1,7 +1,8 @@
-import { useState } from "react";
+'use client'
+import { useState } from 'react'
 
 export default function Input({ taskToAdd }) {
-  let [inputValue, setInputValue] = useState("");
+  let [inputValue, setInputValue] = useState('')
   return (
     <>
       <input
@@ -10,12 +11,12 @@ export default function Input({ taskToAdd }) {
       ></input>
       <button
         onClick={() => {
-          if (inputValue !== "") taskToAdd(inputValue);
-          setInputValue("");
+          if (inputValue !== '') taskToAdd(inputValue)
+          setInputValue('')
         }}
       >
         submit
       </button>
     </>
-  );
+  )
 }
