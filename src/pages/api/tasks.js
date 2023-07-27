@@ -17,8 +17,7 @@ export default async function handler(req, res) {
     await client.connect()
     const database = client.db('Todo')
     const collection = database.collection('tasks')
-    const doc = { nom: 'Dimeh', task: 'Devenir riche' }
-    let result = await collection.insertOne(doc)
+
     let tasksList = await collection.find().toArray()
     console.log(tasksList)
     res.status(200).json(tasksList)
