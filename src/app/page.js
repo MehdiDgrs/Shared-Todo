@@ -19,20 +19,20 @@ export default function App() {
       }
     }
     fetchData().then((data) => {
-      if (data) {
+      if (data[0]) {
         let dataToArray = data.map((x) => {
-          return {
-            task: x.task,
-            id: x._id,
+          if (x.task) {
+            return {
+              task: x.task,
+              id: x._id,
+            }
           }
         })
         setTask((prev) => [...prev, ...dataToArray])
-      } else {
-        setTask('error')
       }
     })
   }, [])
-  console.log(taskArray)
+
   let addTask = (value) => {
     setTask((previous) => [...previous, value])
   }

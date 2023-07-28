@@ -1,13 +1,5 @@
 const { MongoClient } = require('mongodb')
-async function listDatabases(client) {
-  try {
-    databasesList = await client.db().admin().listDatabases()
-  } catch {
-    console.log('error fetching all databases')
-  }
-  console.log('Databases:')
-  databasesList.databases.forEach((db) => console.log(` - ${db.name}`))
-}
+
 export default async function handler(req, res) {
   let mdp = process.env.BDD_PASSWORD
   const client = new MongoClient(

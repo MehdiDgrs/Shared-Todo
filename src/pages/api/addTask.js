@@ -9,6 +9,7 @@ export default async function handler(req, res) {
     const database = client.db('Todo')
     const collection = database.collection('tasks')
     let request = JSON.parse(req.body)
+    console.log(request)
     let doc = { nom: request.name, task: request.task }
     const result = await collection.insertOne(doc)
     console.log(result)
