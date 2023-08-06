@@ -39,9 +39,9 @@ export default function App() {
 
   return (
     <main>
-      <h1>TodoList</h1>
-      <TaskList taskArray={taskArray} updateArray={setTask}></TaskList>
+      <h1 className='title'>TodoList</h1>
       <Input taskToAdd={addTask} taskToCompareFromInput={taskArray}></Input>
+      <TaskList taskArray={taskArray} updateArray={setTask}></TaskList>
     </main>
   )
 }

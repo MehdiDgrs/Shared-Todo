@@ -1,0 +1,105 @@
+:root {
+    --font-caveat :'Caveat',cursive;
+
+}
+
+/* Alignement */
+
+body {
+    height: 100vh;
+   
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.container {
+  display: flex;
+  justify-content: center; /* Alignement horizontal */
+  align-items: center; /* Alignement vertical */
+}
+
+/* Contraste */
+.header {
+  font-size: 24px;
+  color: #ffffff;
+  background-color: #333333;
+}
+
+/* Répétition */
+.button {
+  background-color: #007BFF;
+  color: white;
+ 
+  border: none;
+  font-family: inherit
+  ;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none; /* Supprimer la bordure par défaut */
+  border-bottom: 1px solid #000; /* Ajouter une bordure inférieure pour ressembler à une ligne de cahier */
+  font-family: inherit; /* Utiliser la même police que le reste du document */
+  font-size: 16px;
+  background-color: inherit;
+}
+input[type="text"]::placeholder {
+  color: red; /* Couleur grise pour le placeholder */
+  font-family: inherit;
+}
+
+/* Équilibre (Symétrique) */
+.equilibrium {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Espace (Espace Blanc) */
+.space {
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Hiérarchie (Taille et Échelle) */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #777;
+}
+
+.inputContainer {
+    display:flex;
+    align-items: center;
+    justify-items: center;    
+
+}
+.taskList ul {
+    list-style-type: none;
+    padding-inline-start: 0em;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    
+}
+.listContainer {
+    font-family: 'Permanent Marker',cursive;
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+    text-decoration: line-through;
+    
+
+}
+li {
+    flex:1;
+max-width: 100%;
+    overflow-wrap: break-word;
+
+}

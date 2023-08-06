@@ -7,8 +7,11 @@ export default function Input({ taskToAdd, taskToCompareFromInput }) {
   let exist = false
   console.log(taskToCompareFromInput)
   return (
-    <>
+    <div className='inputContainer'>
       <input
+        onClick={(e) => {
+          setInputPlaceHolder(false)
+        }}
         value={inputValue}
         placeholder={inputPlaceHolder}
         onChange={(e) => {
@@ -17,6 +20,7 @@ export default function Input({ taskToAdd, taskToCompareFromInput }) {
         }}
       ></input>
       <button
+        className='button'
         onClick={() => {
           for (let i = 0; i < taskToCompareFromInput.length; i++) {
             if (taskToCompareFromInput[i].task.includes(inputValue)) {
@@ -25,7 +29,7 @@ export default function Input({ taskToAdd, taskToCompareFromInput }) {
             }
           }
           if (exist) {
-            setInputPlaceHolder('existe deja')
+            setInputPlaceHolder('Cette tâche existe deja')
             setInputValue('')
             return
           } else {
@@ -42,6 +46,6 @@ export default function Input({ taskToAdd, taskToCompareFromInput }) {
       >
         submit
       </button>
-    </>
+    </div>
   )
 }

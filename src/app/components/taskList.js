@@ -4,11 +4,11 @@ export default function TaskList({ taskArray, updateArray }) {
     updateArray(newArr)
   }
   return (
-    <div>
+    <div className='taskList'>
       <ul>
         {taskArray.map((task) => {
           return (
-            <div key={task.id}>
+            <div className='listContainer' key={task.id}>
               <li key={task.id}>{task.task}</li>
               <button
                 onClick={async () => {
