@@ -35,8 +35,13 @@ export default function Signin() {
             e.preventDefault();
             let res = await fetch("http://localhost:3000/api/addUser", {
               method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
               body: JSON.stringify(value),
             });
+            let data = await res.json();
+            console.log(data.message);
           }}
         >
           submit

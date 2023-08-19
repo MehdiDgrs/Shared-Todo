@@ -49,7 +49,14 @@ export default function Loging() {
         >
           submit
         </button>
-        <div> `${isConnected && <span>connecté!</span>}` </div>
+        <div>
+          {" "}
+          `${isConnected ? (
+            <span>connecté!</span>
+          ) : (
+            <span>mauvais id</span>
+          )}`{" "}
+        </div>
       </form>
     </>
   );
