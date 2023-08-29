@@ -1,5 +1,6 @@
 import Client from "@/app/components/useClient";
 import bcrypt from "bcrypt";
+import { cookies } from "next/dist/client/components/headers";
 export default async function findUser(req, res) {
   try {
     console.log(req.body.mdp);
